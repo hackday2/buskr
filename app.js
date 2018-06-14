@@ -35,6 +35,7 @@ const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 const buskrController = require('./controllers/buskr');
+const buskrControllerRegister = require('./controllers/buskr-register');
 
 /**
  * API keys and Passport configuration.
@@ -139,6 +140,7 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
 
 // Our routes
 app.get('/buskr', buskrController.buskerhome);
+app.get('/buskr-register', buskrControllerRegister.buskerRegister);
 // End Our routes
 
 /**
