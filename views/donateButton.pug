@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  .row
+    .col
+      h1 Donate Button
+      p.lead Create your customised PayPal donate button and get $$$ yo
+
+  .row.justify-content-center
+    .col-md-8
+      form(action="/")
+        .form-group.row
+          .col-12
+            div(class="accordion", id="setupWalkthrough")
+              div(class="card")
+                div(class="card-header" id="setup")
+                  h5(class="mb-0")
+                    button(class="btn btn-link collapsed", type="button", data-toggle="collapse", data-target="#collapseOne", aria-expanded="true", aria-controls="collapseOne") Set up PayPal Donate button
+                div(id="collapseOne", class="collapse", aria-labelledby="setup", data-parent="#setupWalkthrough")
+                  div(class="card-body")
+                    ol
+                      li Click the link 
+                        a(href="https://www.paypal.com/uk/cgi-bin/webscr?cmd=_button-designer&factory_type=buynow") 'Get PayPal donate button'
+                      li Set button type to 'Donation'
+                      li Enter your busker name in the 'Organisation name/service'
+                      li Enter the PayPal email address where you would like to receive payments
+                      li Click 'Create Button'
+                      li On the next page, go to the 'Email' tab
+                      li Copy the displayed link into our PayPal URL generator form
+
+            a.btn.btn-primary(href="https://www.paypal.com/uk/cgi-bin/webscr?cmd=_button-designer&factory_type=buynow" target="_blank") Get PayPal donate button
+
+          label(for="paypal-url", class="col col-sm-2 col-form-label") PayPal URL
+          .col.col-sm-10
+            input(type="text" id="paypal-url" class="form-control")

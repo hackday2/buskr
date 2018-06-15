@@ -35,7 +35,8 @@ const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 const buskrController = require('./controllers/buskr');
-const buskrControllerMap = require('./controllers/buskrMap')
+const buskrControllerMap = require('./controllers/buskrMap');
+const donateButtonController = require('./controllers/donateButton');
 
 /**
  * API keys and Passport configuration.
@@ -141,6 +142,7 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
 // Our routes
 app.get('/buskr', buskrController.buskerhome);
 app.get('/buskrMap', buskrControllerMap.buskerMap);
+app.get('/donateButton', donateButtonController.donateButton);
 // End Our routes
 
 /**
