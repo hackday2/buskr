@@ -11,7 +11,13 @@ function initMap() {
 
 function updateWithGeoLocation(){
     navigator.geolocation.getCurrentPosition(function(position) {
-        console.log(position.coords.latitude, position.coords.longitude);
+        var marker = new google.maps.Marker({position:{lat:position.coords.latitude,lng:position.coords.longitude},map: map});
+        var infowindow = new google.maps.InfoWindow({
+            content: "you are here!"
+          });
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
       });
 
 }
@@ -23,9 +29,7 @@ function getLocalPerformers(){
 
 function addPerformersToMap(data){
     data.forEach(busker => {addBuskerToMap(busker);
-        
     });
-
 }
 
 function addBuskerToMap(busker){
@@ -36,5 +40,4 @@ function addBuskerToMap(busker){
       marker.addListener('click', function() {
         infowindow.open(map, marker);
       });
-    console.log(busker);
 }
