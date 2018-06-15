@@ -1,0 +1,42 @@
+[
+{
+    "busker":"Trevor",
+    "description":"Magician",
+    "rating":"adequate",
+    "pitch":{"name":"waverley steps",
+                "location":{
+                    "lat":55.9529449,
+                    "lng":-3.1902845
+                } }
+},
+{
+    "busker":"Lee",
+    "description":"Techno DJ",
+    "rating":"garbage",
+    "pitch":{"name":"royal mile",
+                "location":{
+                    "lat":55.9503383,
+                    "lng":-3.1884858
+                } }
+},
+{
+    "busker":"Laura",
+    "description":"Acrobat",
+    "rating":"Handstanding",
+    "pitch":{"name":"bristo square",
+                "location":{
+                    "lat":55.945949,
+                    "lng":-3.19109
+                } }
+},
+{
+    "busker":"Paul",
+    "description":"comedian",
+    "rating":"cringe",
+    "pitch":{"name":"festival square",
+                "location":{
+                    "lat":55.947316,
+                    "lng":-3.209697
+                } }
+}
+]
