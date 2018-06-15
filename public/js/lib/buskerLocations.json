@@ -3,6 +3,7 @@
     "busker":"Trevor",
     "description":"Magician",
     "rating":"adequate",
+    "icon":"images/icons/magician.png",
     "pitch":{"name":"waverley steps",
                 "location":{
                     "lat":55.9529449,
@@ -13,6 +14,7 @@
     "busker":"Lee",
     "description":"Techno DJ",
     "rating":"garbage",
+    "icon":"images/icons/dj.png",
     "pitch":{"name":"royal mile",
                 "location":{
                     "lat":55.9503383,
@@ -23,6 +25,7 @@
     "busker":"Laura",
     "description":"Acrobat",
     "rating":"Handstanding",
+    "icon":"images/icons/acrobat.png",
     "pitch":{"name":"bristo square",
                 "location":{
                     "lat":55.945949,
@@ -32,6 +35,7 @@
 {
     "busker":"Paul",
     "description":"comedian",
+    "icon":"images/icons/comedian.png",
     "rating":"cringe",
     "pitch":{"name":"festival square",
                 "location":{

@@ -29,7 +29,7 @@ function addPerformersToMap(data){
 }
 
 function addBuskerToMap(busker){
-    var marker = new google.maps.Marker({position: busker.pitch.location, map: map, title:busker.name});
+    var marker = new google.maps.Marker({position: busker.pitch.location, map: map, title:busker.name, icon:busker.icon});
     var infowindow = new google.maps.InfoWindow({
         content: busker.busker  + " - " + busker.rating + " - " + busker.description
       });
