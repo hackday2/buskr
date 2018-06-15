@@ -39,16 +39,18 @@ block content
       .col-sm-4
         img(src=user.gravatar(), class='profile', width='100', height='100')
     .form-group.row
+      h2 User type is : #{user.profile.usertype}
+    .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right What type of user are you?
       .col-sm-6
         label.radio.col-sm-3
           input(type='radio', checked=user.profile.usertype=='busker', name='usertype', value='busker', data-toggle='radio')
           span Busker
         label.radio.col-sm-3
-          input(type='radio', checked=user.profile.gender=='customer', name='usertype', value='customer', data-toggle='radio')
+          input(type='radio', checked=user.profile.usertype=='customer', name='usertype', value='customer', data-toggle='radio')
           span Customer
         label.radio.col-sm-3
-          input(type='radio', checked=user.profile.gender=='other', name='usertype', value='other', data-toggle='radio')
+          input(type='radio', checked=user.profile.usertype=='other', name='usertype', value='other', data-toggle='radio')
           span Other
     .form-group
       .offset-sm-3.col-md-7.pl-2
