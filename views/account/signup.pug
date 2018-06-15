@@ -2,7 +2,7 @@ extends ../layout
 
 block content
   .pb-2.mt-2.mb-4.border-bottom
-    h3 Sign up
+    h3 Busker Sign up
   form(id='signup-form', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group.row
@@ -17,6 +17,17 @@ block content
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='confirmPassword') Confirm Password
       .col-md-7
         input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='usertype') Are you a busker or interested in seeing buskers?
+      .col-md-7
+        .form-check
+          input.form-control(type='checkbox', name='usertype', id='usertypebusker')
+          label.col-form-label.font-weight-bold.text-right(for='usertypebusker') Busker?
+          input.form-control(type='checkbox', name='usertype', id='usertypeviewer')
+          label.col-form-label.font-weight-bold.text-right(for='usertypeviewer') Interested in seeing buskers?
+
+
+        
     .form-group.offset-sm-3.col-md-7.pl-2
       button.btn.btn-success(type='submit')
         i.fas.fa-user-plus.fa-sm
