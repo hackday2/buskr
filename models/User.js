@@ -19,11 +19,13 @@ const userSchema = new mongoose.Schema({
   tokens: Array,
 
   profile: {
+    usertype: String,    
     name: String,
     gender: String,
     location: String,
     website: String,
-    picture: String
+    picture: String,
+
   }
 }, { timestamps: true });
 

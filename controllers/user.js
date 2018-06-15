@@ -24,6 +24,7 @@ exports.getLogin = (req, res) => {
  * Sign in using email and password.
  */
 exports.postLogin = (req, res, next) => {
+  debugger;
   req.assert('email', 'Email is not valid').isEmail();
   req.assert('password', 'Password cannot be blank').notEmpty();
   req.sanitize('email').normalizeEmail({ gmail_remove_dots: false });
@@ -80,6 +81,7 @@ exports.getSignup = (req, res) => {
  * Create a new local account.
  */
 exports.postSignup = (req, res, next) => {
+  debugger;
   req.assert('email', 'Email is not valid').isEmail();
   req.assert('password', 'Password must be at least 4 characters long').len(4);
   req.assert('confirmPassword', 'Passwords do not match').equals(req.body.password);
@@ -132,7 +134,7 @@ exports.getAccount = (req, res) => {
 exports.postUpdateProfile = (req, res, next) => {
   req.assert('email', 'Please enter a valid email address.').isEmail();
   req.sanitize('email').normalizeEmail({ gmail_remove_dots: false });
-
+  debugger;
   const errors = req.validationErrors();
 
   if (errors) {
@@ -147,6 +149,8 @@ exports.postUpdateProfile = (req, res, next) => {
     user.profile.gender = req.body.gender || '';
     user.profile.location = req.body.location || '';
     user.profile.website = req.body.website || '';
+    debugger;
+    user.profile.usertype = req.body.usertype  || '';
     user.save((err) => {
       if (err) {
         if (err.code === 11000) {
