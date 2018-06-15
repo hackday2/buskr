@@ -3,8 +3,8 @@
  * Buskrhomepage page.
  */
 exports.buskerhome = (req, res) => {
-  res.render('buskr-register', {
-    title: 'buskr-register',
+  res.render('buskr', {
+    title: 'buskr',
     full_title: 'Edinburgh Busker finder',
     date_test: new Date()
   });
